@@ -1,0 +1,777 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>JOSE OFFICIALS | Official Website</title><style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background:#f5f7fb;
+    color:#1f2937;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#0f172a;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+    color:white;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#38bdf8;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:15px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* =========================
+   HOME SECTION
+========================= */
+
+.hero{
+    min-height:92vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px 20px;
+    color:white;
+    background:
+    radial-gradient(circle at top,#38bdf8 0%,transparent 35%),
+    linear-gradient(135deg,#2563eb,#0f172a 75%);
+}
+
+.hero-content{
+    max-width:850px;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero-small{
+    font-size:18px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+    color:#bae6fd;
+}
+
+.hero h1{
+    font-size:60px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+    text-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+    color:#e0f2fe;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.button{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.primary{
+    background:white;
+    color:#2563eb;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.button:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    color:#0f172a;
+}
+
+.section-title p{
+    color:#64748b;
+    margin-top:8px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 8px 30px rgba(15,23,42,0.08);
+    text-align:center;
+}
+
+.about-container p{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(15,23,42,0.08);
+    transition:0.4s;
+    border-top:4px solid #2563eb;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(15,23,42,0.15);
+}
+
+.icon{
+    font-size:48px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:#2563eb;
+    margin-bottom:12px;
+    font-size:21px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+    max-width:800px;
+    margin:auto;
+}
+
+.skill{
+    margin-bottom:25px;
+}
+
+.skill-top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.skill-bar{
+    height:12px;
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.skill-progress{
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+    border-radius:20px;
+}
+
+/* =========================
+   WHY CHOOSE ME
+========================= */
+
+.why{
+    background:#eaf4ff;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.why-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.why-card h3{
+    margin:10px 0;
+    color:#2563eb;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+
+.contact .section-title h2{
+    color:white;
+}
+
+.contact .section-title p{
+    color:#cbd5e1;
+}
+
+.contact-box{
+    max-width:650px;
+    margin:auto;
+}
+
+.contact-item{
+    background:#1e293b;
+    padding:18px;
+    margin:12px 0;
+    border-radius:12px;
+}
+
+.contact-item a{
+    color:#38bdf8;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-buttons{
+    margin-top:30px;
+}
+
+.whatsapp{
+    background:#22c55e;
+    color:white;
+}
+
+.call{
+    background:#2563eb;
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#020617;
+    color:#94a3b8;
+    text-align:center;
+    padding:25px;
+}
+
+footer strong{
+    color:white;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+        padding:15px;
+    }
+
+    nav{
+        text-align:center;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:5px 7px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:85vh;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .about-container{
+        padding:25px;
+    }
+
+}
+
+</style></head><body><!-- =========================
+     NAVIGATION
+========================= --><header><div class="logo">
+    JOSE <span>OFFICIALS</span>
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header><!-- =========================
+     HOME
+========================= --><section class="hero" id="home"><div class="hero-content">
+
+    <div class="hero-small">
+        Welcome to my website
+    </div>
+
+    <h1>
+        JOSE <span>OFFICIALS</span>
+    </h1>
+
+    <p>
+        Creativity • Technology • Digital Skills
+    </p>
+
+    <p>
+        Building ideas and turning creativity into digital experiences.
+    </p>
+
+    <div class="buttons">
+
+        <a href="#services" class="button primary">
+            Explore My Services
+        </a>
+
+        <a href="#contact" class="button secondary">
+            Contact Me
+        </a>
+
+    </div>
+
+</div>
+
+</section><!-- =========================
+     ABOUT
+========================= --><section id="about"><div class="section-title">
+
+    <h2>About Me</h2>
+
+    <p>
+        Get to know JOSE OFFICIALS
+    </p>
+
+</div>
+
+
+<div class="about-container">
+
+    <p>
+        Welcome to <strong>JOSE OFFICIALS</strong>.
+    </p>
+
+    <p>
+        I am passionate about technology, creativity,
+        digital design and website development.
+    </p>
+
+    <p>
+        I am continuously learning new digital skills
+        and developing creative projects that can make
+        a difference in the digital world.
+    </p>
+
+</div>
+
+</section><!-- =========================
+     SERVICES
+========================= --><section id="services"><div class="section-title">
+
+    <h2>My Services</h2>
+
+    <p>
+        Creative and digital services
+    </p>
+
+</div>
+
+
+<div class="services">
+
+
+    <div class="card">
+
+        <div class="icon">🎨</div>
+
+        <h3>Graphic Design</h3>
+
+        <p>
+            Creative posters, social media graphics,
+            advertisements and digital designs.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">🎬</div>
+
+        <h3>Video Editing</h3>
+
+        <p>
+            Creative video editing for social media,
+            personal projects and digital content.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">🌐</div>
+
+        <h3>Website Development</h3>
+
+        <p>
+            Modern and mobile-friendly websites
+            for individuals and small businesses.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">📱</div>
+
+        <h3>Social Media</h3>
+
+        <p>
+            Creative digital content and ideas
+            for social media platforms.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================
+     SKILLS
+========================= --><section id="skills"><div class="section-title">
+
+    <h2>My Skills</h2>
+
+    <p>
+        Skills I am developing
+    </p>
+
+</div>
+
+
+<div class="skills-container">
+
+
+    <div class="skill">
+
+        <div class="skill-top">
+            <span>HTML & CSS</span>
+            <span>70%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress" style="width:70%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill">
+
+        <div class="skill-top">
+            <span>Graphic Design</span>
+            <span>65%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress" style="width:65%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill">
+
+        <div class="skill-top">
+            <span>Video Editing</span>
+            <span>60%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress" style="width:60%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill">
+
+        <div class="skill-top">
+            <span>Digital Creativity</span>
+            <span>80%</span>
+        </div>
+
+        <div class="skill-bar">
+            <div class="skill-progress" style="width:80%;"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================
+     WHY JOSE OFFICIALS
+========================= --><section class="why"><div class="section-title">
+
+    <h2>Why JOSE OFFICIALS?</h2>
+
+    <p>
+        Creativity, learning and digital growth
+    </p>
+
+</div>
+
+
+<div class="why-container">
+
+
+    <div class="why-card">
+
+        <div class="icon">💡</div>
+
+        <h3>Creative Ideas</h3>
+
+        <p>
+            Turning ideas into creative digital projects.
+        </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+        <div class="icon">📚</div>
+
+        <h3>Continuous Learning</h3>
+
+        <p>
+            Always learning and improving digital skills.
+        </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+        <div class="icon">🚀</div>
+
+        <h3>Future Focused</h3>
+
+        <p>
+            Building skills for future opportunities in technology.
+        </p>
+
+    </div>
+
+
+    <div class="why-card">
+
+        <div class="icon">🤝</div>
+
+        <h3>Professional Service</h3>
+
+        <p>
+            Focused on creating useful and quality digital work.
+        </p>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================
+     CONTACT
+========================= --><section class="contact" id="contact"><div class="section-title">
+
+    <h2>Contact Me</h2>
+
+    <p>
+        Let's connect
+    </p>
+
+</div>
+
+
+<div class="contact-box">
+
+
+    <div class="contact-item">
+
+        📧 Email:
+        <a href="mailto:joseofficials7@gmail.com">
+            joseofficials7@gmail.com
+        </a>
+
+    </div>
+
+
+    <div class="contact-item">
+
+        📱 Phone:
+        <a href="tel:+256792914092">
+            0792914092
+        </a>
+
+    </div>
+
+
+    <div class="contact-buttons">
+
+        <a
+            href="https://wa.me/256792914092"
+            class="button whatsapp">
+            WhatsApp Me
+        </a>
+
+
+        <a
+            href="tel:+256792914092"
+            class="button call">
+            Call Me
+        </a>
+
+    </div>
+
+
+</div>
+
+</section><!-- =========================
+     FOOTER
+========================= --><footer><p>
+    © 2026 <strong>JOSE OFFICIALS</strong>
+</p>
+
+<p>
+    All Rights Reserved.
+</p>
+
+</footer></body>
+</html>
